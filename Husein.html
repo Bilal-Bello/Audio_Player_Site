@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Qur'an Audio</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css" />
+
+
+
+</head>
+
+<style>
+  .surah-block h3 {
+  text-align: center;
+}
+
+  .surah-block {
+  margin: 35px 0;
+}
+
+.surah-block h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #fff;
+}
+
+.container {
+  max-width: 1100px;   /* controls how wide the page is */
+  margin: 0 auto;      /* centers horizontally */
+  padding: 40px 20px;
+}
+
+h1, p {
+  text-align: center;
+}
+
+.surah-block {
+  margin: 40px 0;
+}
+
+audio {
+  width: 100% !important;
+}
+
+.mejs__container {
+  width: 100% !important;
+}
+
+
+</style>
+<!--For all the body-->
+<style>
+  body {
+  background: #0f172a;
+  color: #f1f5f9;
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.surah-block {
+  padding: 20px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.surah-block:hover {
+  background: #111c2d;
+}
+
+h1 {
+  color: #f1f5f9;
+}
+
+p {
+  color: #94a3b8;
+}
+
+</style>
+
+
+
+
+<body>
+
+<div class="container">
+
+
+
+<h1>Qur'an Audio Recitation</h1>
+<p>Listen and download clear recitations of each Surah.</p>
+
+
+<div id="surah-al-Baqara" class="surah-block">
+  <h3>001 - Aal-Baqara</h3>
+  <audio controls>
+    <source src="audio/Goni-Baqarah.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<div id="surah-al-imran" class="surah-block">
+  <h3>002 - Aal-Imran</h3>
+  <audio controls>
+    <source src="audio/GONI-AL_IMRAN.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<div id="surah-an-nisa" class="surah-block">
+  <h3>003 - An-Nisa</h3>
+  <audio controls>
+    <source src="audio/Goni-Nisaa.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<div id="surah-al-maidah" class="surah-block">
+  <h3>004 - Al-Ma’idah</h3>
+  <audio controls>
+    <source src="audio/GONI-MAIDA.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<div id="surah-al-anam" class="surah-block">
+  <h3>005 - Al-An’am</h3>
+  <audio controls>
+    <source src="audio/Goni-An'Am.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<div id="surah-al-araf" class="surah-block">
+  <h3>006 - Al-A’raf</h3>
+  <audio controls>
+    <source src="audio/GONI-A'RAAF.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<div id="surah-al-anfal" class="surah-block">
+  <h3>007 - Al-Anfal</h3>
+  <audio controls>
+    <source src="audio/GONI-ANFAL.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<div id="surah-at-tawbah" class="surah-block">
+  <h3>008 - At-Tawbah</h3>
+  <audio controls>
+    <source src="audio/GONI-TAWBAH.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+
+</div>
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const audios = document.querySelectorAll('audio');
+
+  audios.forEach(audio => {
+    new MediaElementPlayer(audio, {
+      features: [
+        'playpause',
+        'current',
+        'progress',
+        'duration',
+        'volume',
+        'skipback',
+        'skipforward'
+      ],
+      skipBackInterval: 10,
+      skipForwardInterval: 10
+    });
+  });
+});
+</script>
+
+
+</html>
