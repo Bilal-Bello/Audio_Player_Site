@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <title>Qur'an Audio</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css" />
@@ -10,6 +11,37 @@
 </head>
 
 <style>
+  /* ===== Improve Mobile Touch Experience ===== */
+
+@media (max-width: 768px) {
+
+  .mejs__controls {
+    padding: 12px 0 !important;
+  }
+
+  .mejs__button button {
+    transform: scale(1.4);
+  }
+
+  .mejs__button {
+    margin: 0 8px !important;
+  }
+
+  .mejs__time-total {
+    height: 8px !important;
+  }
+
+  .mejs__time-current {
+    height: 8px !important;
+  }
+
+  .mejs__volume-button {
+    display: none !important; /* optional: hide volume on mobile */
+  }
+
+
+  
+}
   .surah-block h3 {
   text-align: center;
 }
@@ -182,4 +214,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 </html>
+
 
