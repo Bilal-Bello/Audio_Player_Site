@@ -109,7 +109,22 @@ p {
 
 </style>
 
+<!-- Autoplay Next Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const audioElements = Array.from(document.querySelectorAll('audio'));
 
+  audioElements.forEach(function (audio, index) {
+    audio.addEventListener('ended', function () {
+      const next = audioElements[index + 1];
+      if (next) {
+        next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        next.play();
+      }
+    });
+  });
+});
+</script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const audios = document.querySelectorAll('audio');
@@ -143,6 +158,22 @@ document.addEventListener("DOMContentLoaded", function () {
           other.pause();
         }
       });
+    });
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const audioElements = Array.from(document.querySelectorAll('audio'));
+
+  audioElements.forEach(function (audio, index) {
+    audio.addEventListener('ended', function () {
+      const next = audioElements[index + 1];
+      if (next) {
+        next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        next.play();
+      }
     });
   });
 });
@@ -182,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 </style>
 <nav class="top-nav">
-  <a href="Others.html">☰ Others </a>
+  <a href="Bottom.html">☰ Others </a>
 </nav>
 
 <div id="surah-al-Fatiha" class="surah-block">
@@ -356,10 +387,10 @@ document.addEventListener("DOMContentLoaded", function () {
    <div id="surah-Hijr" class="surah-block">
   <h3>015 - Hijr</h3>
   <audio controls>
-    <source src="audio/GONI-HIJR.mp3" type="audio/mp3">
+    <source src="audio/GONI-HIJRA.mp3" type="audio/mp3">
   </audio>
   <div class="downlaod-wrapper"> 
-  <a href="audio/GONI-HIJR.mp3" download class="download-btn">
+  <a href="audio/GONI-HIJRA.mp3" download class="download-btn">
     Download 
   </a>
 
@@ -369,71 +400,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 </body>
 <footer>
-  <div id="surah-Hijr" class="surah-block">
-  <h3>--- waqiah</h3>
-  <audio controls>
-    <source src="audio2/GONI-WAQIAH.mp3" type="audio/mp3">
-  </audio>
-  <div class="downlaod-wrapper"> 
-  <a href="audio2/GONI-WAQIAH.mp3" download class="download-btn">
-    Download 
-  </a>
-  <div id="surah-Hijr" class="surah-block">
-  <h3>--- Moujadiloun</h3>
-  <audio controls>
-    <source src="audio2/Goni-Moujadiloûn.m4a" type="audio/mp3">
-  </audio>
-  <div class="downlaod-wrapper"> 
-  <a href="audio2/Goni-Moujadiloûn.m4a" download class="download-btn">
-    Download 
-  </a>
-  <div id="surah-Hijr" class="surah-block">
-  <h3>--- Hashr</h3>
-  <audio controls>
-    <source src="audio2/Goni-Hashr.m4a" type="audio/mp3">
-  </audio>
-  <div class="downlaod-wrapper"> 
-  <a href="audio2/Goni-Hashr.m4a" download class="download-btn">
-    Download 
-  </a>
-  <div id="surah-Hijr" class="surah-block">
-  <h3>--- Hadid</h3>
-  <audio controls>
-    <source src="audio2/Goni-Hadid.m4a" type="audio/mp3">
-  </audio>
-  <div class="downlaod-wrapper"> 
-  <a href="audio2/Goni-Hadid.m4a" download class="download-btn">
-    Download 
-  </a>
-
-  <div id="surah-Hijr" class="surah-block">
-  <h3>---  Naba</h3>
-  <audio controls>
-    <source src="audio2/Goni-Naba.m4a" type="audio/mp3">
-  </audio>
-  <div class="downlaod-wrapper"> 
-  <a href="audio2/Goni-Naba.m4a" download class="download-btn">
-    Download 
-  </a>
-  <div id="surah-Hijr" class="surah-block">
-  <h3>--- Abasa</h3>
-  <audio controls>
-    <source src="audio2/Goni-Abasa.m4a" type="audio/mp3">
-  </audio>
-  <div class="downlaod-wrapper"> 
-  <a href="audio2/Goni-Abasa.m4a" download class="download-btn">
-    Download 
-  </a>
-  <div id="surah-Hijr" class="surah-block">
-  <h3>--- Naziat</h3>
-  <audio controls>
-    <source src="audio2/Goni-Naziat.m4a" type="audio/mp3">
-  </audio>
-  <div class="downlaod-wrapper"> 
-  <a href="audio2/Goni-Naziat.m4a" download class="download-btn">
-    Download 
-  </a>
+  <p style="text-align: center; color: #94a3b8; margin-top: 40px;">© 2026 Qur'an Audio. All rights reserved.</p>
 </footer>
-
 
 </html>

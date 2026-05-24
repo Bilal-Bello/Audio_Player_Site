@@ -1,0 +1,272 @@
+12<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qur'an Audio</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css" />
+
+
+
+</head>
+<!--Download button style-->
+<style>
+  .download-btn {
+  display: inline-block; 
+  margin-top: 12px;
+  padding: 6px 14px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #d4af37;
+  color: #111;
+}
+.downlaod-wrapper{
+  text-align: right;
+  margin-top: 10 px;
+}
+</style>
+<!--General-->
+<style>
+  .surah-block h3 {
+  text-align: center;
+}
+
+  .surah-block {
+  margin: 35px 0;
+}
+
+.surah-block h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #fff;
+}
+
+.container {
+  max-width: 1100px;   /* controls how wide the page is */
+  margin: 0 auto;      /* centers horizontally */
+  padding: 40px 20px;
+}
+
+h1, p {
+  text-align: center;
+}
+
+.surah-block {
+  margin: 40px 0;
+}
+
+audio {
+  width: 100% !important;
+}
+
+.mejs__container {
+  width: 100% !important;
+}
+
+
+</style>
+<!--For all the body-->
+<style>
+  body {
+  background: #0f172a;
+  color: #f1f5f9;
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.surah-block {
+  padding: 20px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.surah-block:hover {
+  background: #111c2d;
+}
+
+h1 {
+  color: #f1f5f9;
+}
+
+p {
+  color: #94a3b8;
+}
+
+</style>
+
+<!-- Autoplay Next Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const audioElements = Array.from(document.querySelectorAll('audio'));
+
+  audioElements.forEach(function (audio, index) {
+    audio.addEventListener('ended', function () {
+      const next = audioElements[index + 1];
+      if (next) {
+        next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        next.play();
+      }
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const audios = document.querySelectorAll('audio');
+
+  audios.forEach(audio => {
+    new MediaElementPlayer(audio, {
+      features: [
+        'playpause',
+        'current',
+        'progress',
+        'duration',
+        'volume',
+        'skipback',
+        'skipforward'
+      ],
+      skipBackInterval: 10,
+      skipForwardInterval: 10
+    });
+  });
+});
+</script>
+<!--To avoid multiple audios playing at once -->
+<script> 
+document.addEventListener("DOMContentLoaded", function () {
+  const audios = document.querySelectorAll('audio');
+
+  audios.forEach(audio => {
+    audio.addEventListener('play', function () {
+      audios.forEach(other => {
+        if (other !== audio && !other.paused) {
+          other.pause();
+        }
+      });
+    });
+  });
+});
+</script>
+<script src="autoplay-next.js" defer>
+    
+</script>
+
+<body>
+
+<div class="container">
+
+
+
+<h1>Qur'an Audio Recitation from below</h1>
+<p>Listen and download clear recitations of each Surah.</p>
+
+<!--For the seond page of stories-->
+<style>
+  .top-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+  }
+
+  .top-nav a {
+    color: #b88907;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .top-nav a:hover {
+    color: #710cf7;
+    border-bottom-color: #710cf7;
+  }
+</style>
+
+
+<div id="btn-surah-056" class="surah-block">
+  <h3>056 - Al-Waqi'ah</h3>
+  <audio controls>
+    <source src="audio2/GONI-WAQIAH.mp3" type="audio/mpeg">
+  </audio>
+  <div class="downlaod-wrapper">
+    <a href="audio2/GONI-WAQIAH.mp3" download class="download-btn">Download</a>
+  </div>
+</div>
+
+<div id="btn-surah-057" class="surah-block">
+  <h3>057 - Al-Hadid</h3>
+  <audio controls>
+    <source src="audio2/Goni-Hadid.m4a" type="audio/mp4">
+  </audio>
+  <div class="downlaod-wrapper">
+    <a href="audio2/Goni-Hadid.m4a" download class="download-btn">Download</a>
+  </div>
+</div>
+
+<div id="btn-surah-058" class="surah-block">
+  <h3>058 - Al-Mujadila</h3>
+  <audio controls>
+    <source src="audio2/Goni-Moujadiloûn.m4a" type="audio/mp4">
+  </audio>
+  <div class="downlaod-wrapper">
+    <a href="audio2/Goni-Moujadiloûn.m4a" download class="download-btn">Download</a>
+  </div>
+</div>
+
+<div id="btn-surah-059" class="surah-block">
+  <h3>059 - Al-Hashr</h3>
+  <audio controls>
+    <source src="audio2/Goni-Hashr.m4a" type="audio/mp4">
+  </audio>
+  <div class="downlaod-wrapper">
+    <a href="audio2/Goni-Hashr.m4a" download class="download-btn">Download</a>
+  </div>
+</div>
+
+<div id="btn-surah-078" class="surah-block">
+  <h3>078 - An-Naba'</h3>
+  <audio controls>
+    <source src="audio2/Goni-Naba.m4a" type="audio/mp4">
+  </audio>
+  <div class="downlaod-wrapper">
+    <a href="audio2/Goni-Naba.m4a" download class="download-btn">Download</a>
+  </div>
+</div>
+
+<div id="btn-surah-079" class="surah-block">
+  <h3>079 - An-Nazi'at</h3>
+  <audio controls>
+    <source src="audio2/Goni-Naziat.m4a" type="audio/mp4">
+  </audio>
+  <div class="downlaod-wrapper">
+    <a href="audio2/Goni-Naziat.m4a" download class="download-btn">Download</a>
+  </div>
+</div>
+
+<div id="btn-surah-080" class="surah-block">
+  <h3>080 - 'Abasa</h3>
+  <audio controls>
+    <source src="audio2/Goni-Abasa.m4a" type="audio/mp4">
+  </audio>
+  <div class="downlaod-wrapper">
+    <a href="audio2/Goni-Abasa.m4a" download class="download-btn">Download</a>
+  </div>
+</div>
